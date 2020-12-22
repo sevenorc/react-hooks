@@ -7,7 +7,7 @@ const MovieList = ({movie, inputSearch, inputSearchRate}) => {
             {(inputSearchRate) ? (
             movie
             .filter( (el)=> (el.title.toUpperCase().startsWith(inputSearch.toUpperCase())  ))
-            .filter((el)=>  ((el.rate) == inputSearchRate))
+            .filter((el)=>  ((el.rate) >= inputSearchRate))
             .map((el,i) => <MovieCard el={el} key={i}/>) ) 
             : (movie
                 .filter( (el)=> (el.title.toUpperCase().startsWith(inputSearch.toUpperCase())  ))

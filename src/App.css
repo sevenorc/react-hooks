@@ -26,4 +26,20 @@ input {
 .top-search {
     display: flex;
     justify-content: space-between;
+    margin: 30px 20px;
+}
+
+.stars {
+    font-size: 35px;
+    color:rgba(238, 255, 0, 0.822)
+}
+
+.search-input {
+    display: flex;
+    align-items: center;
+}
+
+#search-label {
+    font-size: 24px;
+    color: rgba(8, 146, 146, 0.521);
 }

@@ -61,10 +61,10 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Free Movies</h1>
+      <h1 style ={{marginTop:"30px"}} >Free Movies</h1>
       <div className="top-search">
         <AddMovie handleAdd={handleAdd} />
-        <Filter setInputSearchRate={setInputSearchRate} setInputSearch={setInputSearch}/>
+        <Filter setInputSearchRate={setInputSearchRate} setInputSearch={setInputSearch} inputSearchRate={inputSearchRate} inputSearch={inputSearch}/>
       </div>
       <MovieList inputSearch={inputSearch} movie={movie} inputSearchRate={inputSearchRate} />
     </div>
