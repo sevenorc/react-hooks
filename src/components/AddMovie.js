@@ -8,14 +8,16 @@ const ModalExample = ({handleAdd}) => {
     const [inputPoster, setInputPoster] = useState('');
     const [inputRate, setInputRate] = useState(0);
     const [inputDescription, setInputDescription] = useState('');
+    const [inputTrailer, setInputTrailer] = useState('')
 
     const Add = () => {
-        handleAdd(inputTitle, inputRate, inputPoster, inputDescription);
+        handleAdd(inputTitle, inputRate, inputPoster, inputDescription, inputTrailer);
         setModal(!modal);
         setInputTitle('');
         setInputPoster('');
         setInputDescription('');
         setInputRate(0);
+        setInputTrailer('');
     }
 
   const [modal, setModal] = useState(false);
@@ -26,6 +28,7 @@ const ModalExample = ({handleAdd}) => {
         setInputPoster('');
         setInputDescription('');
         setInputRate(0);
+        setInputTrailer('')
   }
 
   return (
@@ -46,6 +49,9 @@ const ModalExample = ({handleAdd}) => {
               <br />
               <label>Enter description</label>
               <input type="text" onChange={(e)=>setInputDescription(e.target.value)} value={inputDescription} />
+              <br />
+              <label>Enter Trailer Url</label>
+              <input onChange={(e)=>setInputTrailer(e.target.value)} value={inputTrailer} />
           </form>
         </ModalBody>
         <ModalFooter>
