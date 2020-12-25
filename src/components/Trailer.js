@@ -7,7 +7,7 @@ const Trailer = ({movie,match}) => {
     return (
         <div className="trailer-box">
             <h1 style={{marginBottom:"30px"}}>{item.title}</h1>
-            {item.trailer}
+            <iframe width="560" height="315" src={item.trailer} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <p style={{marginTop:"20px"}}>{item.description}</p>
             <Link to="/">
                 <button style={{marginTop:"20px"}} className="btn btn-info">Home</button>
